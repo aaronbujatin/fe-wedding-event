@@ -1,0 +1,104 @@
+<div class="flex justify-center mx-auto items-center container">
+    <!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+
+    <section class="relative flex flex-wrap lg:h-[80vh] w-2/3 lg:items-center container">
+        <div class="relative h-full w-full sm:h-96 lg:h-full lg:w-1/2">
+            <img alt="Welcome" src="https://labellefeteweddings.com/wp-content/uploads/2019/09/contact-us-1.png"
+                class="absolute inset-0 h-full w-full object-cover" />
+        </div>
+        <div class="w-full px-4 h-full sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 ">
+            <div class="mx-auto max-w-lg text-start">
+                <h1 class="text-2xl font-semibold sm:text-3xl text-[#01452C] font-['PP_Fragment']">Contact us</h1>
+
+                <p class="mt-4 text-gray-500 font-['Quicksand']">
+                    Please provide us with the necessary information:
+                </p>
+            </div>
+
+            <form action="" class="mx-auto mb-0 mt-8 max-w-md space-y-4 font-['Quicksand']" #userForm="ngForm" (submit)="onSubmit()">
+                <div>
+                    <label for="brideName " class="sr-only">Bride full name</label>
+
+                    <div class="relative">
+                        <input  class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
+                            placeholder="Full bride name" 
+                            id="brideName" type="text" [(ngModel)]="user.brideName" name="cc"/>
+                    </div>
+                </div>
+                <div>
+                    <label for="groomName" class="sr-only">Groom name</label>
+
+                    <div class="relative">
+                        <input  class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
+                            placeholder="Full groom name" 
+                            id="groomName " type="text" [(ngModel)]="user.groomName" name="groomName "/>
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email</label>
+
+                    <div class="relative">
+                        <input type="email" class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
+                        id="email" [(ngModel)]="user.email " name="email" placeholder="Email"  />
+                    </div>
+                </div>
+                <div>
+                    <label for="phone" class="sr-only">Phone</label>
+
+                    <div class="relative">
+                        <input type="text" class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
+                        id="phone" [(ngModel)]="user.phone " name="phone" placeholder="Phone" />
+                    </div>
+                </div>
+                <div>
+                    <label for="receptionVenue " class="sr-only">Reception/Celebration Venue</label>
+
+                    <div class="relative">
+                        <input type="text" class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
+                        id="receptionVenue" [(ngModel)]="user.receptionVenue" name="receptionVenue" placeholder="Reception/Celebration Venue" />
+                    </div>
+                </div>
+                <div>
+                    <label for="estimatedBudget" class="sr-only">Estimated budget</label>
+
+                    <div class="relative">
+                        <input type="text" class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
+                        id="estimatedBudget" [(ngModel)]="user.estimatedBudget" name="estimatedBudget" placeholder="Estimated budget" />
+                    </div>
+                </div>
+                <div>
+                    <label for="guestNumber" class="sr-only">Estimated guest</label>
+
+                    <div class="relative">
+                        <input type="text" class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
+                        id="guestNumber" [(ngModel)]="user.guestNumber" name="guestNumber" placeholder="Estimated guest" />
+                    </div>
+                </div>
+                <div>
+                    <label for="message" class="sr-only">Message</label>
+
+                    <div class="relative">
+                        <input type="text" class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
+                        id="message" [(ngModel)]="user.message" name="message" placeholder="Additional message" />
+                    </div>
+                </div>
+
+                
+
+                <div class="flex items-center justify-between">
+                   
+
+                    <button type="submit"
+                        class="inline-block  px-5 py-3 text-sm font-medium text-white bg-[#E8AAAD]">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
