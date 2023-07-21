@@ -7,7 +7,7 @@ import { Carousel, Dropdown, initTE } from 'tw-elements';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fe-AEMS';
+  title = 'Sweet Serenity';
 
   ngOnInit() {
     initTE({ Carousel, Dropdown });

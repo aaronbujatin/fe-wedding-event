@@ -5,7 +5,7 @@ import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   {path : '', component : HomeComponent},
-  {path: 'contact', component: ContactComponent}
+  {path: 'contact', component: ContactComponent, title : "Sweet Serenity - Contact"}
 ];
 
 @NgModule({
