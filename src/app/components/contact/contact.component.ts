@@ -38,4 +38,9 @@ export class ContactComponent {
       }
     });
   }
+
+  isValidGmail(email: string): boolean {
+    return email?.toLowerCase().endsWith('@gmail.com');
+    
+  }
 }
