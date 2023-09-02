@@ -18,4 +18,6 @@ export class UserService {
     return this.httpClient.post<any>(`${this.API_URL}/api/v1/users`, user);
   }
 
+  
+
 }

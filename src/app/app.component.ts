@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Carousel, Dropdown, initTE } from 'tw-elements';
+import { Carousel, Dropdown, initTE, Lightbox } from 'tw-elements';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Sweet Serenity';
 
   ngOnInit() {
-    initTE({ Carousel, Dropdown });
+    initTE({ Carousel, Dropdown, Lightbox });
   }
 
 }
