@@ -20,7 +20,7 @@
 
                     <div class="relative">
                         <input
-                            class="w-full text-black focus:border text-black focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm font-medium shadow-sm"
+                            class="w-full  focus:border text-black focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm font-medium shadow-sm"
                             placeholder="Full bride name" id="brideName" type="text" required
                             [(ngModel)]="user.brideName" name="brideName" #brideName="ngModel" />
                         <div *ngIf="brideName.errors?.['required'] && (brideName.dirty || brideName.touched)"
@@ -55,8 +55,7 @@
                             class="text-red-700 text-sm">
                             Email is required.
                         </div>
-                        <div *ngIf="email.errors?.['email']"
-                            class="text-red-700 text-sm">
+                        <div *ngIf="email.errors?.['email']" class="text-red-700 text-sm">
                             Email is not valid.
                         </div>
                     </div>
@@ -80,7 +79,7 @@
                     <div class="relative">
                         <input type="text" id="receptionVenue" required name="receptionVenue" #receptionVenue="ngModel"
                             class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
-                            i [(ngModel)]="user.receptionVenue" placeholder="Reception/Celebration Venue" />
+                            [(ngModel)]="user.receptionVenue" placeholder="Reception/Celebration Venue" />
                         <div *ngIf="receptionVenue.errors?.['required'] && (receptionVenue.dirty || receptionVenue.touched)"
                             class="text-red-700 text-sm">
                             Reception venue is required.
@@ -91,15 +90,39 @@
                     <label for="estimatedBudget" class="sr-only">Estimated budget</label>
 
                     <div class="relative">
-                        <input type="text" id="estimatedBudget" required name="estimatedBudget"
-                            #estimatedBudget="ngModel"
+                        <select
                             class="w-full focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
-                            [(ngModel)]="user.estimatedBudget" placeholder="Estimated budget" />
-                        <div *ngIf="estimatedBudget.errors?.['required'] && (estimatedBudget.dirty || estimatedBudget.touched)"
+                            id="selectedPackage" type="text" name="selectedPackage" #selectedPackage="ngModel"
+                            [(ngModel)]="user.selectedPackage">
+                            <option [ngValue]="undefined" [disabled]="true" class="text-gray-400" selected>Select
+                                Package</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Emerald">Emerald</option>
+                            <option value="Diamond">Diamond</option>
+                        </select>
+
+
+                        <!-- <div *ngIf="selectedPackage.errors?.['required'] && (selectedPackage.dirty || selectedPackage.touched)"
                             class="text-red-700 text-sm">
                             Estimated budget is required.
-                        </div>
+                        </div> -->
                     </div>
+                    <!-- <div class="relative">
+                        <select
+                            class="block appearance-none w-full   text-gray-900 border border-black  py-3 px-4 pr-8  leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            id="country" type="text" data-te-select-placeholder="Example placeholder" data-te-select-init
+                            >
+                            <option value="" disabled selected>Select country</option>
+                            <option>Philippines</option>
+                            <option>Malaysia</option>
+                            <option>Indonesia</option>
+                            <option>Thailand</option>
+                            <option>Singapore</option>
+                            <option>Cambodia</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        </div>
+                    </div> -->
                 </div>
                 <div>
                     <label for="guestNumber" class="sr-only">Estimated guest</label>
@@ -122,7 +145,7 @@
                             class="w-full h-28 focus:border focus:border-[#E8AAAD] focus:outline-none border  border-[#E8AAAD] p-2 pe-12 text-sm shadow-sm"
                             id="message" [(ngModel)]="user.message" name="message"
                             placeholder="Additional message (Optional) ">
-                        </textarea> 
+                        </textarea>
                     </div>
                 </div>
                 <div class="flex items-center justify-between">

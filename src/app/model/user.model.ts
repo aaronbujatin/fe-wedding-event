@@ -5,7 +5,7 @@ export class User {
     groomName : string
     guestNumber : number
     receptionVenue : string
-    estimatedBudget : number
+    selectedPackage : number
     email : string
     ceremonyVenue : string
     startDate : string

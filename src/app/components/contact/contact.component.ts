@@ -15,7 +15,10 @@ export class ContactComponent {
 
   user : User = new User();
   
+
+  
   onSubmit(){
+
     this.userService.sendInquiry(this.user).subscribe(
       (response) => {
         this.successAlert()
